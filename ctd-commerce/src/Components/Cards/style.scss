@@ -5,12 +5,6 @@
     flex-flow: row wrap;
     width: 100vw;    
     text-align: center;
-    background-color: rgb(0, 0, 0, 0.8);
-    background-image: url("../Assets/banner-rocket.png");
-    background-size: 100%;
-    background-attachment: fixed;  
-    
-    
     
 
 }
@@ -18,13 +12,17 @@
 #card {
     display: flex;
     justify-content: center;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     align-items: center;
     width: 250px;
     background-color: rgb(255, 255, 255);    
     margin: 50px 50px;
     border-radius: 10%;
     box-shadow: 2px 2px 2px 1px rgba(0,0,0, 0.7);  
+
+    img {
+        margin-top: 2.5rem;      
+    }
 
 }
 
@@ -39,8 +37,7 @@
     
     img{
         width: 100%;      
-        border-radius: 10%;
-        margin-top: 0;
+        border-radius: 10%;    
         padding: 5px;
     }
 }

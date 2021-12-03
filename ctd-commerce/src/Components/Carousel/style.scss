@@ -1,5 +1,11 @@
 .carousel-inner {   
     width: 100%;
+    background-color: rgb(0, 0, 0, 0.2);
+    background-image: url("../Assets/banner-rocket.png");
+    background-size:100%;
+    // background-attachment: fixed;  
+    background-repeat: no-repeat;
+    // background-position: center;
 }
 
 
