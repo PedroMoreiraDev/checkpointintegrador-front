@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import Cards from '../Cards'; 
+import Cards from '../Cards/index.js'; 
 
 
 const Carousel =()=> {
