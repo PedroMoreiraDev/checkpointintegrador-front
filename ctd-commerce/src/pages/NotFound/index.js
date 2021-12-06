@@ -1,16 +1,16 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
-
+import imgRocket from './banner-rocket.png'
 const NotFound = () => {
   const navigate = useNavigate();
 
   setTimeout(() => {
     navigate('/');
-  }, 5000);
+  }, 50000);
 
   return (
     <>
-      <h2>404 nada por aqui</h2>
+      <img src={imgRocket} alt="Erro 404 Not Found" width="100%" centered />
     </>
   )
 }
