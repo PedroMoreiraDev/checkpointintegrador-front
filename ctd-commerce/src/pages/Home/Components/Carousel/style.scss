@@ -1,11 +1,11 @@
-.carousel-inner {   
-    width: 100%;
-    background-color: rgb(0, 0, 0, 0.2);
-    background-image: url("../Assets/banner-rocket.png");
-    background-size:100%;
-    // background-attachment: fixed;  
-    background-repeat: no-repeat;
-    // background-position: center;
+#carousel-container {
+    background-image: url("../Assets/12_generated.jpg"); 
+    background-size: 70%;
+    background-attachment: fixed;    
 }
 
-
+#bg-opacity {
+    width: 100%;
+    background-color: whitesmoke;
+    opacity: 0.1;
+}
