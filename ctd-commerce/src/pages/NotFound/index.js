@@ -9,9 +9,9 @@ const NotFound = () => {
   }, 50000);
 
   return (
-    <>
+    <div className="container-fluid">
       <img src={imgRocket} alt="Erro 404 Not Found" width="100%" centered />
-    </>
+    </div>
   )
 }
 export default NotFound;
