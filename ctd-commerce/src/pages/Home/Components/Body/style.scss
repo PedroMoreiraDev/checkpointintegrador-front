@@ -1,0 +1,36 @@
+#container-body {
+    // background-color: orange ;  
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+
+
+}
+
+
+#teste-1 {
+    width: 30%;
+    align-items: center;
+}
+
+
+#teste-2 {
+    background-color: #F2F2F2;
+    background-size: 100%;
+    width: 70%;
+    flex-flow: row wrap;
+    align-items: center;
+
+    #products {
+        display: flex;
+        justify-content: center;
+        align-items: center;     
+        width: 100%;
+        margin-top:2rem;
+        color: white;
+       
+    }
+
+
+}
