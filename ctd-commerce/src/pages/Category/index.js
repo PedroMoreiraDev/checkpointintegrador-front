@@ -6,20 +6,20 @@ export default function Category({cat}) {
  let nome = `${cat}`;
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        async function loadCategoryData() {
+        async function loadProductData() {
             try {
-                const response = await api.get('/products/category/eletronic');
+                const response = await api.get(`/products/category/${cat}`);
                 setProducts(response.data);
             } catch (err) {
                 console.error("Não foi possivel carregar os dados" + err);
             }
         }
-        loadCategoryData();
+        loadProductData();
     },[nome]);
 
 
     return (
-        <div>
+        <div classname="container-fluid d-flex">
             {products.map(({ id, nome, description, image, price }) => {
                 return (
                     <CardProdCat key={id*3.1415} prodcImg={image} prodcDesc={description} producTitle={nome} producPrice={price} />

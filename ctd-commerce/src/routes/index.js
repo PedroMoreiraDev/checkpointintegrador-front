@@ -11,7 +11,7 @@ const RouteList = () => (
   <Header/>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/category/eletronics" element={<Category cat={"eletronic"}/>} />
+      <Route path="/category/:item" element={<Category cat={":item"}/>} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer/> 

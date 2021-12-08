@@ -1,11 +1,24 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './style.scss';
 import logo from '../Assets/startup.png'
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import api from '../../../../service/Api';
 
 
 const Header = () => {
+    const [categories, setCategoryes] = useState([]);
+    useEffect(() => {
+        async function loadCategoriesData() {
+            try {
+                const response = await api.get('/categories');
+                setCategoryes(response.data);
+            } catch (err) {
+                console.error("Não foi possivel carregar os dados" + err);
+            }
+        }
+        loadCategoriesData();
+    }, []);
     return (
         <>
             <header>
@@ -15,8 +28,10 @@ const Header = () => {
 
                         <div id="logo" className="d-flex justify-content-center align-items-center">
                             <a className="navbar-brand " >
+                                <Link to={"/"}>
                                 <img src={logo} class="m-2" alt="logo-rocket" width="50" height="50" />
                                 RocketShop
+                                </Link>
                             </a>
                         </div>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample06" aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,10 +45,14 @@ const Header = () => {
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" id="dropdown06" data-bs-toggle="dropdown" aria-expanded="false">Produtos</a>
                                     <ul className="dropdown-menu" aria-labelledby="dropdown06">
-
-                                        <li><a class="dropdown-item" href="#">Categoria 1</a></li>
-                                        <li><a class="dropdown-item" href="#">Categoria 2</a></li>
-                                        <li><a class="dropdown-item" href="#">Categoria 3</a></li>
+                                        {categories.map((item) => {
+                                            return (
+                                                <li>
+                                                    <Link to={`/category/:${item}`}>
+                                                        <a class="dropdown-item"  >{item}</a>
+                                                    </Link></li>
+                                            )
+                                        })}
                                     </ul>
                                 </li>
                                 <li className="nav-item">
