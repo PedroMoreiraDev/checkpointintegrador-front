@@ -22,10 +22,7 @@ const CarouselHome=()=>{
                     </div>
                 </Row>                  
             </Carousel.Item>
-            <Carousel.Item>
-            </Carousel.Item>
-
-   
+               
         </Carousel>
     )
 }

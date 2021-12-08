@@ -21,10 +21,10 @@ const Body = () => {
 
     return (
         
-        <div className="container-fluid d-flex justify-content-center align-items-center">
+        <div className=" d-flex justify-content-center align-items-center">
             {products.map(({ id, nome, description, image, price }) => {
                 return (
-                    <CardProdCat key={id} prodcImg={image} prodcDesc={description} producTitle={nome} producPrice={price} />
+                    <CardProdCat className=" d-lg" key={id} prodcImg={image} prodcDesc={description} producTitle={nome} producPrice={price} />
                 )
             })}
         </div>

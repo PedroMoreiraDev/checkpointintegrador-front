@@ -28,7 +28,7 @@ const Header = () => {
 
                         <div id="logo" className="d-flex justify-content-center align-items-center">
                             <a className="navbar-brand " >
-                                <Link to={"/"}>
+                                <Link to={"/"} style={{textDecoration: 'none' , textDecorationColor: 'none'}}>
                                 <img src={logo} class="m-2" alt="logo-rocket" width="50" height="50" />
                                 RocketShop
                                 </Link>
