@@ -5,6 +5,7 @@ import CardProd from '../Card';
 
 const Body =()=> {
 return (
+<<<<<<< HEAD
     <>
         <div class="container-fluid d-flex justify-content-center align-itens-center" id="container-body">
             <div class="d-flex justify-content-center" id="teste-1">Teste1</div> 
@@ -23,6 +24,9 @@ return (
                 <CardProd />               
             </div>
         </div>
+=======
+<>
+>>>>>>> 7304a140fe772ddfb28d552cba0abed5c07e5fdc
 </> 
 )
 
