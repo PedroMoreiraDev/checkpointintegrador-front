@@ -3,17 +3,15 @@ import './style.scss';
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
-const CardProd=({})=>{
+const CardProdCat=({prodcImg, producTitle, prodcDesc,producPrice})=>{
     return(
         <Card className="m-5 p-3"style={{ width: '18rem' }} id="card">
-            <Card.Img variant="top" src="https://m.media-amazon.com/images/I/41GZCWFJB1L._AC_.jpg" />
+            <Card.Img variant="top" src={prodcImg} />
             <Card.Body>
-                <Card.Title>Nome do produto</Card.Title>
-                <Card.Text>
-                    Breve descrição sobre o produto.  Breve descrição sobre o produto. Breve descrição sobre o produto.
-                </Card.Text>
+                <Card.Title>{producTitle}</Card.Title>
+                <Card.Text>{prodcDesc}</Card.Text>
                 <Card.Text id="preco">
-                    Preço: R$ 50,00
+                    Preço: R$ {producPrice}
                 </Card.Text>
                 <div className="d-flex justify-content-center align-items-center" id="button">  
                     <Button id="button" variant="primary">Comprar</Button>
@@ -28,4 +26,4 @@ const CardProd=({})=>{
     )
 }
 
-export default CardProd;
+export default CardProdCat;

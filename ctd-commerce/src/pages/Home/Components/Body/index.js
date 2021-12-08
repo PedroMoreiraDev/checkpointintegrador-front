@@ -22,8 +22,6 @@ return (
                 <CardProd />
                 <CardProd />               
             </div>
-        
-           
         </div>
 </> 
 )
