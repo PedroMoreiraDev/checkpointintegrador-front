@@ -21,7 +21,11 @@ const CarouselHome=()=>{
                     </Col>
                     </div>
                 </Row>                  
-            </Carousel.Item>                   
+            </Carousel.Item>
+            <Carousel.Item>
+            </Carousel.Item>
+
+   
         </Carousel>
     )
 }

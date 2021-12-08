@@ -40,16 +40,18 @@ const Header = () => {
                         <div className="collapse navbar-collapse" id="navbarsExample06">
                             <ul className="navbar-nav me-auto mb-2 mb-xl-0">
                                 <li className="nav-item">
-                                    <a className="nav-link" aria-current="page" href="#">Home</a>
+                                <Link to={"/"}>
+                                    <a className="nav-link" aria-current="page">Home</a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" href="#" id="dropdown06" data-bs-toggle="dropdown" aria-expanded="false">Produtos</a>
                                     <ul className="dropdown-menu" aria-labelledby="dropdown06">
                                         {categories.map((item) => {
                                             return (
-                                                <li>
-                                                    <Link to={`/category/:${item}`}>
-                                                        <a class="dropdown-item"  >{item}</a>
+                                                <li key={item}>
+                                                    <Link to={`/category/${item}`}>
+                                                        <a className="dropdown-item"  >{item}</a>
                                                     </Link></li>
                                             )
                                         })}

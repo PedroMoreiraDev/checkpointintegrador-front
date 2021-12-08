@@ -6,7 +6,7 @@ import { Card, Button } from 'react-bootstrap';
 const CardProdCat=({prodcImg, producTitle, prodcDesc,producPrice})=>{
     return(
         <Card className="m-5 p-3"style={{ width: '18rem' }} id="card">
-            <Card.Img variant="top" src={prodcImg} />
+            <Card.Img variant="top" src={prodcImg}  />
             <Card.Body>
                 <Card.Title>{producTitle}</Card.Title>
                 <Card.Text>{prodcDesc}</Card.Text>

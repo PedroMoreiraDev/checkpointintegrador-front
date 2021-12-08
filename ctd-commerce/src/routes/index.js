@@ -11,10 +11,10 @@ const RouteList = () => (
   <Header/>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/category/:item" element={<Category cat={":item"}/>} />
+      <Route path="/category/:cat" element={<Category />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
-    <Footer/> 
+    <Footer/>
 
   </BrowserRouter>
 );
