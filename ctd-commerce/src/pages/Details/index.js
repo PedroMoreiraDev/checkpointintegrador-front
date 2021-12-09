@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Container, Row, Col, Button} from 'react-bootstrap'
 import './style.scss';
 
 export default class Details extends Component {
@@ -38,10 +38,6 @@ export default class Details extends Component {
 
 
                 </Row>
-            
-
-
-
             </Container>
             </>
         )
