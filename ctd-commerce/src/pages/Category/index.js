@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import api from '../../service/Api';
 import CardProd from '../Home/Components/Card/index'
+import './style.scss';
 
 export default function Category() {
     const { cat } = useParams();
@@ -21,7 +22,7 @@ export default function Category() {
     },[cat]);
 
     return (
-        <Container fluid className="d-flex justfy-content-center align-items-center" >
+        <Container fluid className="d-flex justfy-content-center align-items-center" id="container-cat" >
             <Row md={12} className="d-flex justfy-content-center align-items-center" >
             {(products !== 0 && products.map(({ id, title, description, image, price }) => {
                 return (
