@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <>
             <header>
-                <nav className="navbar navbar-expand-xl navbar-light bg-light" aria-label="Sixth navbar examplen">
+                <nav className="navbar navbar-expand-xl navbar-dark bg-dark" aria-label="Sixth navbar examplen">
 
                     <div className="container-fluid d-flex justify-content-center align-items-center">
 

@@ -5,7 +5,7 @@ import { Card, Button } from 'react-bootstrap';
 
 const CardProd=({})=>{
     return(
-        <Card className="m-5 p-3"style={{ width: '18rem' }} id="card">
+        <Card className="m-5 p-3"style={{ width: '16rem' }} id="card">
             <Card.Img variant="top" src="https://m.media-amazon.com/images/I/41GZCWFJB1L._AC_.jpg" />
             <Card.Body>
                 <Card.Title>Nome do produto</Card.Title>

@@ -4,3 +4,10 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
+
+
+  #container-home {
+    background-image: url("../Home/Components/Assets/rocket-purple-light.png");
+    background-size: 100%;
+    background-attachment: fixed;  
+  }
