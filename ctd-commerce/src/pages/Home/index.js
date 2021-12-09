@@ -1,7 +1,7 @@
 import Carousel from './Components/Carousel';
 import Body from './Components/Body';
 import React from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 import './style.scss';
 
 

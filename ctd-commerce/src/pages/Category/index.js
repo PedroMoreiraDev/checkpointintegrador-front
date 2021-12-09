@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import api from '../../service/Api';
 import CardProd from '../Home/Components/Card/index'
@@ -19,16 +20,17 @@ export default function Category() {
         loadProductData();
     },[cat]);
 
-    let prod= products.map;
-    console.log(prod);
     return (
-        <div className="container-fluid d-flex">
-            {products.map(({ id, nome, description, image, price }) => {
+        <Container fluid className="d-flex justfy-content-center align-items-center" >
+            <Row md={12} className="d-flex justfy-content-center align-items-center" >
+            {(products !== 0 && products.map(({ id, title, description, image, price }) => {
                 return (
-                    <CardProd key={id} prodcImg={image} prodcDesc={description} producTitle={nome} producPrice={price} />
+                    <CardProd key={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />
                 )
-            })}
-        </div>
+            }))}
+            </Row> 
+        </Container>
+        
     )
 
 };
