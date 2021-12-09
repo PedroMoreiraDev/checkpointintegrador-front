@@ -19,7 +19,6 @@ const Body = () => {
             try {
                 const response = await api.get(`/products`);
                 setProductsAll(response.data);
-                console.log(response.data);
             } catch (err) {
                 console.error("Não foi possivel carregar os dados" + err);
             }
