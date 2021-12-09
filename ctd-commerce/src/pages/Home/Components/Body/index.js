@@ -10,7 +10,7 @@ const Body = () => {
 
     const title = "ROCKETSHOP"
     const subtitle = "OS MENORES PREÇOS DA GALÁXIA ESTÃO AQUI"
-    const products = "---------------------- PRODUTOS ----------------------"
+    const products = "PRODUTOS"
 
 
     const [productsAll, setProductsAll] = useState([]);
@@ -31,8 +31,9 @@ const Body = () => {
             <Container fluid id="container-body" className="mt-5">
                 <h1>{title}</h1>
                 <h2>{subtitle}</h2>
-                <Row id="sub-body">
-                    <Col md={3}>
+                <Row id="sub-body">             
+
+                    {/* <Col md={3}>
                         <div className="d-flex justify-content-center align-items-center flex-wrap flex-column  mt-3 p-3" id="cat" style={{ color: 'white' }}>
                             <h4 style={{ color: 'smokewhite' }}>Categorias</h4>
                             <div>Categoria 1</div>
@@ -47,8 +48,8 @@ const Body = () => {
                             <img className="mt-3" style={{ width: '100%' }} src={cupom} alt="cyber-monday" />
                         </div>
 
-                    </Col>
-                    <Col md={9} className="d-flex justify-content-center align-items-center flex-wrap flex-column" id="cards-area" >
+                    </Col> */}
+                    <Col md={12} className="d-flex justify-content-center align-items-center flex-wrap flex-column" id="cards-area" >
                         <h3>{products}</h3>
 
                         <div className="d-flex justify-content-center align-items-center flex-wrap flex-row" id="cards">

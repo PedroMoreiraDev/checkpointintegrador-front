@@ -1,6 +1,13 @@
 #card {
     box-shadow: 2px 2px 2px 1px rgba(0,0,0, 0.7);
+  
          
+}
+
+p.card-text{
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #preco{ 
