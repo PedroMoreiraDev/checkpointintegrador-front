@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import api from '../../service/Api';
-import CardProdCat from './components/CardProdCat'
+import CardProd from '../Home/Components/Card/index'
 
 export default function Category() {
     const { cat } = useParams();
@@ -19,12 +19,13 @@ export default function Category() {
         loadProductData();
     },[cat]);
 
-
+    let prod= products.map;
+    console.log(prod);
     return (
         <div className="container-fluid d-flex">
             {products.map(({ id, nome, description, image, price }) => {
                 return (
-                    <CardProdCat key={id} prodcImg={image} prodcDesc={description} producTitle={nome} producPrice={price} />
+                    <CardProd key={id} prodcImg={image} prodcDesc={description} producTitle={nome} producPrice={price} />
                 )
             })}
         </div>
