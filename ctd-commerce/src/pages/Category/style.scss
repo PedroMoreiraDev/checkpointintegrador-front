@@ -4,3 +4,12 @@
     background-attachment: fixed;  
     background-repeat: no-repeat;
 }
+
+
+@media (max-width: 1200px)
+{
+    #container-cat {
+        background-image: none;
+        background-color: purple;
+    }
+}

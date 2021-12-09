@@ -12,3 +12,24 @@
     background-attachment: fixed;  
     background-repeat: no-repeat;
   }
+
+
+
+  @media (max-width: 1200px)
+{
+  #container-home {
+    background-image: none;
+    background-color: purple;
+  
+  }
+}
+
+@media (max-width: 300px)
+{
+  #container-home {
+    background-image: none;
+    background-color: purple;
+  
+  
+  }
+}
