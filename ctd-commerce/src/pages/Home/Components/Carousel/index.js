@@ -22,38 +22,7 @@ const CarouselHome=()=>{
                     </div>                    
                 </Row>                  
             </Carousel.Item>
-
-            <Carousel.Item>
-                <Row>
-                    <div className="d-flex justify-content-center align-items-center">
-                        <Col md={3} sm={6}>
-                            <CardProd />
-                        </Col>
-                        <Col md={3} sm={6} className="d-none d-sm-block">
-                            <CardProd />
-                        </Col>
-                        <Col md={3} sm={6} className="d-none d-md-block">
-                            <CardProd />
-                        </Col>
-                    </div>                    
-                </Row>                  
-            </Carousel.Item> 
-
-            <Carousel.Item>
-                <Row>
-                    <div className="d-flex justify-content-center align-items-center">
-                        <Col md={3} sm={6}>
-                            <CardProd />
-                        </Col>
-                        <Col md={3} sm={6} className="d-none d-sm-block">
-                            <CardProd />
-                        </Col>
-                        <Col md={3} sm={6} className="d-none d-md-block">
-                            <CardProd />
-                        </Col>
-                    </div>                    
-                </Row>                  
-            </Carousel.Item>                    
+               
         </Carousel>
     )
 }

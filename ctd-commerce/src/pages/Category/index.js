@@ -1,28 +1,30 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
 import api from '../../service/Api';
 import CardProdCat from './components/CardProdCat'
 
-export default function Category({cat}) {
- let nome = `${cat}`;
+export default function Category() {
+    const { cat } = useParams();
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        async function loadCategoryData() {
+        async function loadProductData() {
             try {
-                const response = await api.get('/products/category/eletronic');
+                const response = await api.get(`/products/category/${cat}`);
                 setProducts(response.data);
+                console.log(response.data);
             } catch (err) {
                 console.error("Não foi possivel carregar os dados" + err);
             }
         }
-        loadCategoryData();
-    },[nome]);
+        loadProductData();
+    },[cat]);
 
 
     return (
-        <div>
+        <div className="container-fluid d-flex">
             {products.map(({ id, nome, description, image, price }) => {
                 return (
-                    <CardProdCat key={id*3.1415} prodcImg={image} prodcDesc={description} producTitle={nome} producPrice={price} />
+                    <CardProdCat key={id} prodcImg={image} prodcDesc={description} producTitle={nome} producPrice={price} />
                 )
             })}
         </div>
