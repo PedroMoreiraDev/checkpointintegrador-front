@@ -23,11 +23,11 @@ export default function Category() {
     return (
         <Container fluid className="d-flex justfy-content-center align-items-center" >
             <Row md={12} className="d-flex justfy-content-center align-items-center" >
-            {products.map(({ id, nome, description, image, price }) => {
+            {(products !== 0 && products.map(({ id, title, description, image, price }) => {
                 return (
-                    <CardProd key={id} prodcImg={image} prodcDesc={description} producTitle={nome} producPrice={price} />
+                    <CardProd key={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />
                 )
-            })}
+            }))}
             </Row> 
         </Container>
         

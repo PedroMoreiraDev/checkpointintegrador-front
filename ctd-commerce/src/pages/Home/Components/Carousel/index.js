@@ -1,6 +1,6 @@
 import './style.scss';
 import { Carousel, Row, Col } from 'react-bootstrap'
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react'
 import api from '../../../../service/Api';
 import CardProd from '../Card';
 
@@ -18,27 +18,27 @@ const CarouselHome = () => {
             }
         }
         loadProductData();
-    }, []);
-
-    const isEletronic = products => products.category === 'eletronic';
-    const isFood = products => products.category === 'food';
-    const isToys = products => products.category === 'toys';
-    const isCloathing = products => products.category === 'cloathing';
-    const isDrink = products => products.category === 'drink';
-    const isJewelery = products => products.category === 'jewelery';
+    }, [setProducts]);
+    console.log(products);
+    const isEletronic = products => products.category === 'Eletronico';
+    const isFood = products => products.category === 'Comida';
+    const isToys = products => products.category === 'Brinquedos';
+    const isCloathing = products => products.category === 'Vestuario';
+    const isDrink = products => products.category === 'Bebida';
+    const isJewelery = products => products.category === 'Joias e Relogios';
 
     const prodct1 = products.filter(isEletronic).pop();
     const prodct2 = products.filter(isFood).pop();
     const prodct3 = products.filter(isToys).pop();
-    const Carroseul1 = [prodct1,prodct2,prodct3];
+    const Carrousel1 = [prodct1, prodct2, prodct3];
     const prodct4 = products.filter(isCloathing).pop();
     const prodct5 = products.filter(isDrink).pop();
     const prodct6 = products.filter(isJewelery).pop();
-    const Carrousel2 = [prodct4,prodct5,prodct6];
+    const Carrousel2 = [prodct4, prodct5, prodct6];
 
 
 
-    console.log(Carroseul1);
+    console.log(Carrousel1);
     // console.log(prodct2);
     // console.log(prodct3);
     // console.log(prodct4);
@@ -51,36 +51,33 @@ const CarouselHome = () => {
             <Carousel.Item>
                 <Row>
                     <div className="d-flex justify-content-center align-items-center">
-                        <Col md={3} sm={6}>
-                            {(Carroseul1 !== 0 && Carroseul1.map(({ id, nome, description, image, price })) )}
-                            <CardProd key={id} prodcImg={image} producTitle={title} prodcDesc={description} producPrice={price}/>
-                        </Col>
-                        <Col md={3} sm={6} className="d-none d-sm-block">
-                            <CardProd />
-                        </Col>
-                        <Col md={3} sm={6} className="d-none d-md-block">
-                            <CardProd />
-                        </Col>
+                        {(Carrousel1[0] !== undefined && Carrousel1.map(({ id, image, description, title, price }) => {
+                            return (
+                                <Col key={id} md={3} sm={6} className="d-none d-md-block">
+                                    <CardProd key={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />
+                                </Col>
+                            )
+                        }
+                        ))};
                     </div>
                 </Row>
             </Carousel.Item>
+        
             <Carousel.Item>
                 <Row>
                     <div className="d-flex justify-content-center align-items-center">
-                        <Col md={3} sm={6}>
-                            <CardProd />
-                        </Col>
-                        <Col md={3} sm={6} className="d-none d-sm-block">
-                            <CardProd />
-                        </Col>
-                        <Col md={3} sm={6} className="d-none d-md-block">
-                            <CardProd />
-                        </Col>
+                        {(Carrousel2[0] !== undefined && Carrousel2.map(({ id, image, description, title, price }) => {
+                            return (
+                                <Col key={id} md={3} sm={6} className="d-none d-md-block">
+                                    <CardProd key={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />
+                                </Col>
+                            )
+                        }
+                        ))};
                     </div>
                 </Row>
             </Carousel.Item>
-
-
+           
         </Carousel>
     )
 }
