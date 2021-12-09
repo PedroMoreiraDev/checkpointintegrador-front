@@ -5,8 +5,11 @@ import { Card, Button } from 'react-bootstrap';
 
 const CardProd=({prodcImg, producTitle, prodcDesc,producPrice})=>{
     return(
-        <Card className="m-5 p-3"style={{ width: '16rem' }} id="card">
-            <Card.Img variant="top" src={prodcImg}  />
+        <Card className="m-5 p-3"style={{ width: '16rem', height: '30rem' }} id="card">
+            <div className="d-flex justify-content-center align-items-center">
+                <img src={prodcImg} alt="" height="200rem"/>
+            </div>
+            {/* <Card.Img variant="top" src={prodcImg} style={{ height: '16rem', width: '100%' }}  /> */}
             <Card.Body>
                 <Card.Title>{producTitle}</Card.Title>
                 <Card.Text>{prodcDesc}</Card.Text>
