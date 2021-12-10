@@ -40,13 +40,13 @@ export default function Cart() {
                                         <img src={prodcImg} alt=""  className="m-2 justify-content-start"/>
                                         </Col>
                                         <Col>
-                                        <p className="m-2"> {prodcTitle}</p>
+                                        <p className="m-1"> {prodcTitle}</p>
                                         </Col>
                                         <Col>
                                         <p className="m-2"> {prodcDesc}</p>
                                         </Col>
                                         <Col>
-                                        <p className="m-2"> R$ {prodBrPrice}</p>
+                                        <p className="m-1"> R$ {prodBrPrice}</p>
                                         </Col>
                                    </div>               
                                 </Row> 
