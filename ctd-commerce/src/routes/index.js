@@ -7,20 +7,22 @@ import Footer from '../pages/Home/Components/Footer/index'
 import Category from '../pages/Category';
 import Details from '../pages/Details';
 import About from '../pages/About';
+import { HelmetProvider } from 'react-helmet-async';
 
 const RouteList = () => (
   <BrowserRouter>
+    <HelmetProvider>
   <Header/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/category/:cat" element={<Category />} />
-      <Route path="/product/details" element={<Details/>} />
+      <Route path="/product/details/:produc" element={<Details/>} />
       <Route path="/about" element={<About/>} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer/>
-
+    </HelmetProvider>
   </BrowserRouter>
 );
 

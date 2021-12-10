@@ -19,7 +19,7 @@ const CarouselHome = () => {
         }
         loadProductData();
     }, [setProducts]);
-    console.log(products);
+
     const isEletronic = products => products.category === 'Eletronico';
     const isFood = products => products.category === 'Comida';
     const isToys = products => products.category === 'Brinquedos';
@@ -36,16 +36,6 @@ const CarouselHome = () => {
     const prodct6 = products.filter(isJewelery).pop();
     const Carrousel2 = [prodct4, prodct5, prodct6];
 
-
-
-    console.log(Carrousel1);
-    // console.log(prodct2);
-    // console.log(prodct3);
-    // console.log(prodct4);
-    // console.log(prodct5);
-    // console.log(prodct6);
-
-
     return (
         <Carousel id="carousel-container">
             <Carousel.Item>
@@ -53,8 +43,8 @@ const CarouselHome = () => {
                     <div className="d-flex justify-content-center align-items-center">
                         {(Carrousel1[0] !== undefined && Carrousel1.map(({ id, image, description, title, price }) => {
                             return (
-                                <Col key={id} md={3} sm={6} className="d-none d-md-block">
-                                    <CardProd key={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />
+                                <Col id="setClassName" key={id} md={3} sm={6} className="d-none d-md-block">
+                                    <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />
                                 </Col>
                             )
                         }
@@ -69,7 +59,7 @@ const CarouselHome = () => {
                         {(Carrousel2[0] !== undefined && Carrousel2.map(({ id, image, description, title, price }) => {
                             return (
                                 <Col key={id} md={3} sm={6} className="d-none d-md-block">
-                                    <CardProd key={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />
+                                    <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />
                                 </Col>
                             )
                         }

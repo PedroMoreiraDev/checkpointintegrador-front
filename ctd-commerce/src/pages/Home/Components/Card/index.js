@@ -2,19 +2,23 @@
 import './style.scss';
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
-const CardProd=({prodcImg, producTitle, prodcDesc,producPrice})=>{
+const CardProd=({prodcId, prodcImg, prodcTitle, prodcDesc,prodcPrice})=>{
     return(
-        <Card className="m-5 p-3"style={{ width: '21rem', height: '30rem' }} id="card">
+        <Card className="m-5 p-3"style={{ width: '18rem', height: '30rem' }} id="card">
             <div className="d-flex justify-content-center align-items-center">
-                <img src={prodcImg} alt="" height="200rem"/>
+                <Link to={`/product/details/${prodcId}`}>
+                    <img src={prodcImg} alt="" height="200rem"/>
+                </Link>
+
             </div>
             {/* <Card.Img variant="top" src={prodcImg} style={{ height: '16rem', width: '100%' }}  /> */}
             <Card.Body>
-                <Card.Title>{producTitle}</Card.Title>
+                <Card.Title>{prodcTitle}</Card.Title>
                 <Card.Text>{prodcDesc}</Card.Text>
                 <Card.Text id="preco">
-                    Preço: R$ {producPrice}
+                    Preço: R$ {prodcPrice}
                 </Card.Text>
                 <div className="d-flex justify-content-center align-items-center flex-wrap flex-column" id="button">  
                     <Button id="button" variant="primary">Comprar</Button>
@@ -29,4 +33,6 @@ const CardProd=({prodcImg, producTitle, prodcDesc,producPrice})=>{
     )
 }
 
+
 export default CardProd;
+
