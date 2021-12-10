@@ -14,7 +14,6 @@ const CardProd=({prodcId, prodcImg, prodcTitle, prodcDesc,prodcPrice})=>{
                 <Link to={`/product/details/${prodcId}`}>
                     <img src={prodcImg} alt="" height="200rem"/>
                 </Link>
-
             </div>
             {/* <Card.Img variant="top" src={prodcImg} style={{ height: '16rem', width: '100%' }}  /> */}
             <Card.Body>
@@ -25,11 +24,9 @@ const CardProd=({prodcId, prodcImg, prodcTitle, prodcDesc,prodcPrice})=>{
                 </Card.Text>
                 <div className="d-flex justify-content-center align-items-center flex-wrap flex-column" id="button">  
                     <Button onClick={()=>addProd({prodcId, prodcImg, prodcTitle, prodcDesc,prodcPrice})} id="button" variant="primary">Comprar</Button>
-                    
                 </div>
             </Card.Body>
         </Card>
-
     )
 }
 
