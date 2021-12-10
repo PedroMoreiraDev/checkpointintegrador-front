@@ -44,7 +44,7 @@ const CarouselHome = () => {
                         {(Carrousel1[0] !== undefined && Carrousel1.map(({ id, image, description, title, price }) => {
                             return (
                                 <Col id="setClassName" key={id} md={3} sm={6} className="d-none d-md-block">
-                                    <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />
+                                    <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} prodcTitle={title} prodcPrice={price} />
                                 </Col>
                             )
                         }
@@ -59,7 +59,7 @@ const CarouselHome = () => {
                         {(Carrousel2[0] !== undefined && Carrousel2.map(({ id, image, description, title, price }) => {
                             return (
                                 <Col key={id} md={3} sm={6} className="d-none d-md-block">
-                                    <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />
+                                    <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} prodcTitle={title} prodcPrice={price} />
                                 </Col>
                             )
                         }
