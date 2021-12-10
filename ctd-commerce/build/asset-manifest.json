@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6666e1f2.chunk.css",
+    "main.js": "/static/js/main.9a008632.chunk.js",
+    "main.js.map": "/static/js/main.9a008632.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1776f711.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1776f711.js.map",
+    "static/js/2.4e5e7001.chunk.js": "/static/js/2.4e5e7001.chunk.js",
+    "static/js/2.4e5e7001.chunk.js.map": "/static/js/2.4e5e7001.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a901db872e051a25b89aad8f0e75a1de.js": "/precache-manifest.a901db872e051a25b89aad8f0e75a1de.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.6666e1f2.chunk.css.map": "/static/css/main.6666e1f2.chunk.css.map",
+    "static/js/2.4e5e7001.chunk.js.LICENSE.txt": "/static/js/2.4e5e7001.chunk.js.LICENSE.txt",
+    "static/media/banner-rocket.png": "/static/media/banner-rocket.7a25eb37.png",
+    "static/media/cupom.png": "/static/media/cupom.3e0f620d.png",
+    "static/media/duy.png": "/static/media/duy.797ba696.png",
+    "static/media/fernando.png": "/static/media/fernando.d6fbad32.png",
+    "static/media/style.scss": "/static/media/rocket-purple-light.87095846.png",
+    "static/media/leonardo.png": "/static/media/leonardo.0090cd68.png",
+    "static/media/mariana.png": "/static/media/mariana.197172ea.png",
+    "static/media/pedro.png": "/static/media/pedro.0eaf03cd.png",
+    "static/media/peter.png": "/static/media/peter.d0a24811.png",
+    "static/media/startup.png": "/static/media/startup.a372e7ec.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1776f711.js",
+    "static/js/2.4e5e7001.chunk.js",
+    "static/css/main.6666e1f2.chunk.css",
+    "static/js/main.9a008632.chunk.js"
+  ]
+}
