@@ -7,9 +7,11 @@ import Footer from '../pages/Home/Components/Footer/index'
 import Category from '../pages/Category';
 import Details from '../pages/Details';
 import About from '../pages/About';
+import { HelmetProvider } from 'react-helmet-async';
 
 const RouteList = () => (
   <BrowserRouter>
+    <HelmetProvider>
   <Header/>
     <Routes>
       <Route path="/" element={<Home />} />
@@ -20,7 +22,7 @@ const RouteList = () => (
       <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer/>
-
+    </HelmetProvider>
   </BrowserRouter>
 );
 
