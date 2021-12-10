@@ -24,7 +24,7 @@ const Body = () => {
 
     const title = "ROCKETSHOP"
     const subtitle = "OS MENORES PREÇOS DA GALÁXIA ESTÃO AQUI!"
-    const products = "PRODUTOS"
+   
 
 
     const [productsAll, setProductsAll] = useState([]);

@@ -72,3 +72,27 @@ a{
     text-decoration: none;
     color: whitesmoke;
 }
+
+
+
+@media (max-width: 1200px)
+{
+
+    #container-body{
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            color: white;
+        }
+
+        h2{
+            font-size: 1.5rem;
+            text-align: center;
+            color: white;
+            font-weight: lighter;
+        }
+
+    }
+  
+}

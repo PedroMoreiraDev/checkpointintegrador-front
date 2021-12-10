@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { Helmet } from 'react-helmet-async';
 import './style.scss';
 import { CartContext } from '../../contexts/CartContext';
@@ -14,28 +14,35 @@ export default function Cart() {
             <Helmet>
                 <title>RocketShop | Carrinho</title>
             </Helmet>
-            <Container fluid className="d-flex justify-content-center align-items-center" id="container-cat" >
-                <Row md={12} className="d-flex justify-content-center align-items-center" >
-                    <Col>
-                        <div class="bg-danger" >
-                            <ul>
-                                <li>
-                                </li>
-                                <li>
+            <Container fluid md={12} className="d-flex justify-content-center flex-wrap flex-column m-5 align-items-start" >
+                <h1>Carrinho:</h1>
+                <div id="container-titulo" className="d-flex justify-content-around align-items-center flex-wrap flex-row">
+                <p className="me-5">Foto</p>
+                <p className="me-5">Produto</p>
+                <p className="me-5">Descrição</p>
+                <p className="me-5">Preço</p>
+                </div> 
+                {(cartProd !== 0 && cartProd.map(({ prodcId, prodcImg, prodcTitle, prodcDesc,prodcPrice
+ }) => {
+                                return (
 
-                                </li>
-                                <li>
+                                <Row key={prodcId} md={6} className="d-flex justify-content-center align-items-center flex-wrap flex-column" >
+                                    <div id="container-produto" className="d-flex justify-content-around align-items-center flex-wrap flex-row">
+                                        <img src={prodcImg} alt=""  className="m-2"/>
+                                        <p className="m-2"> {prodcTitle}</p>
+                                        <p className="m-2"> {prodcDesc}</p>
+                                        <p className="m-2"> R$ {prodcPrice}</p>
+                                   </div>               
+                                </Row> 
+                                
+                                
+                                 
+                                )
+                            }))}
 
-                                </li>
-                            </ul>
-                        </div>
-                    </Col>
-                    <Col>
-                        <div class="bg-danger" >
 
-                        </div>
-                    </Col>
-                </Row>
+
+               
             </Container>
         </>
     )
