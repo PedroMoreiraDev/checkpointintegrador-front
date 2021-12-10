@@ -69,9 +69,9 @@ const Body = () => {
                         <h3>{products}</h3>
 
                         <div className="d-flex justify-content-center align-items-center flex-wrap flex-row" id="cards">
-                            {productsAll.map(({ id, nome, description, image, price }) => {
+                            {productsAll.map(({ id, title, description, image, price }) => {
                                 return (
-                                    <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} prodcTitle={nome} prodcPrice={price} />
+                                    <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} prodcTitle={title} prodcPrice={price} />
                                 )
                             })}
                         </div>
