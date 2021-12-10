@@ -6,6 +6,7 @@ import Header from '../pages/Home/Components/Header';
 import Footer from '../pages/Home/Components/Footer/index'
 import Category from '../pages/Category';
 import Details from '../pages/Details';
+import About from '../pages/About';
 
 const RouteList = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const RouteList = () => (
       <Route path="/" element={<Home />} />
       <Route path="/category/:cat" element={<Category />} />
       <Route path="/product/details/:produc" element={<Details/>} />
+      <Route path="/about" element={<About/>} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

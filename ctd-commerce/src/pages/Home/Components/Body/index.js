@@ -3,10 +3,24 @@ import React, { useState, useEffect } from 'react';
 import CardProd from '../Card';
 import { Container, Row, Col } from 'react-bootstrap';
 import cupom from '../Assets/cupom.png'
+import { Link } from 'react-router-dom';
 import api from '../../../../service/Api';
 
 
 const Body = () => {
+
+    const [categories, setCategoryes] = useState([]);
+    useEffect(() => {
+        async function loadCategoriesData() {
+            try {
+                const response = await api.get('/categories');
+                setCategoryes(response.data);
+            } catch (err) {
+                console.error("Não foi possivel carregar os dados" + err);
+            }
+        }
+        loadCategoriesData();
+    }, []);
 
     const title = "ROCKETSHOP"
     const subtitle = "OS MENORES PREÇOS DA GALÁXIA ESTÃO AQUI"
@@ -31,16 +45,18 @@ const Body = () => {
             <Container fluid id="container-body" className="mt-5">
                 <h1>{title}</h1>
                 <h2>{subtitle}</h2>
-                <Row id="sub-body">             
+                <Row id="sub-body">
 
-                    {/* <Col md={3}>
+                    <Col md={3}>
                         <div className="d-flex justify-content-center align-items-center flex-wrap flex-column  mt-3 p-3" id="cat" style={{ color: 'white' }}>
                             <h4 style={{ color: 'smokewhite' }}>Categorias</h4>
-                            <div>Categoria 1</div>
-                            <div>Categoria 2</div>
-                            <div>Categoria 3</div>
-                            <div>Categoria 4</div>
-                            <div>Categoria 4</div>
+                            {(categories !== 0 && categories.map((item) => {
+                                return (
+                                    <Link to={`/category/${item}`}>
+                                    <div key={item}><a href="Item">{item}</a></div>
+                                    </Link>
+                                )
+                            }))}
                         </div>
 
                         <div className=" container-fluid d-flex justify-content-center align-items-center flex-wrap flex-column" id="side-bar">
@@ -48,14 +64,14 @@ const Body = () => {
                             <img className="mt-3" style={{ width: '100%' }} src={cupom} alt="cyber-monday" />
                         </div>
 
-                    </Col> */}
+                    </Col>
                     <Col md={12} className="d-flex justify-content-center align-items-center flex-wrap flex-column" id="cards-area" >
                         <h3>{products}</h3>
 
                         <div className="d-flex justify-content-center align-items-center flex-wrap flex-row" id="cards">
                             {productsAll.map(({ id, nome, description, image, price }) => {
                                 return (
-                                    <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} producTitle={nome} producPrice={price} />
+                                    <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} prodcTitle={nome} prodcPrice={price} />
                                 )
                             })}
                         </div>

@@ -1,6 +1,14 @@
 #carousel-container {
     background-image: url("../Assets/galaxy-stars.png"); 
-    background-size: 60%;
-    background-attachment: fixed;
- 
+    background-size: 65%;
+    background-attachment: fixed;   
+}
+
+
+@media (max-width: 1200px)
+{
+    #carousel-container {
+        background-image: none;
+        background-color: purple;
+    }
 }

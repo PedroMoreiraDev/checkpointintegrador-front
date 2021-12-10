@@ -58,7 +58,9 @@ const Header = () => {
                                     </ul>
                                 </li>
                                 <li className="nav-item">
+                                    <Link to={'/about'}>
                                     <a className="nav-link" aria-current="page" href="#">Sobre</a>
+                                    </Link>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4" viewBox="0 0 20 20">
