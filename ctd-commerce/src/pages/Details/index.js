@@ -48,9 +48,7 @@ const Details = () => {
                             <h2>{products.title}</h2>
                             <p className="mb-3">{products.description}</p>
                             <div className="d-flex justify-content-center align-items-start flex-wrap flex-column">
-
                                 <h5 className="mb-4">Preço: R$ {products.price}</h5>
-
                                 <div className="d-flex justify-content-center align-items-start flex-wrap flex-column">
                                 <Button onClick={()=>addProd({prodcId, prodcImg, prodcTitle, prodcDesc,prodBrPrice})} id="button" variant="primary">Comprar</Button>
                                 </div>

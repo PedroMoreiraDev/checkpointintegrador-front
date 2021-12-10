@@ -52,7 +52,7 @@ const CarouselHome = () => {
                     </div>
                 </Row>
             </Carousel.Item>
-        
+
             <Carousel.Item>
                 <Row>
                     <div className="d-flex justify-content-center align-items-center">
@@ -60,14 +60,12 @@ const CarouselHome = () => {
                             return (
                                 <Col id="setClassName" key={id} md={3} sm={6} className={`${index === 1 ? "d-none d-sm-block" : index === 2 ? "d-none d-md-block" : ""}`}>
                                     <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} prodcTitle={title} prodcPrice={price} />
-                                </Col>
-                            )
+                                </Col>)
                         }
                         ))};
                     </div>
                 </Row>
             </Carousel.Item>
-           
         </Carousel>
     )
 }

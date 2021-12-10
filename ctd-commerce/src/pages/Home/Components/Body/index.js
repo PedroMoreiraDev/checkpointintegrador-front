@@ -24,7 +24,7 @@ const Body = () => {
 
     const title = "ROCKETSHOP"
     const subtitle = "OS MENORES PREÇOS DA GALÁXIA ESTÃO AQUI!"
-   
+
 
 
     const [productsAll, setProductsAll] = useState([]);
@@ -53,35 +53,27 @@ const Body = () => {
                             <Carousel.Item>
                                 <div className=" container-fluid d-flex justify-content-center align-items-center flex-wrap flex-row" id="side-bar">
                                     <img className="mt-3" style={{ width: '32%' }} src="https://images.milledcdn.com/2017-11-27/WTgBz3Qe_RoCC5M5/DPCmin9ZTGi3.gif" alt="cyber-monday" />
-                                    {/* <img className="mt-3" style={{ width: '20%' }} src={cupom} alt="cyber-monday" /> */}
                                 </div>
                             </Carousel.Item>
-
                             <Carousel.Item>
                                 <div className=" container-fluid d-flex justify-content-center align-items-center flex-wrap flex-row" id="side-bar">
-                                    {/* <img className="mt-3" style={{ width: '22%' }} src="https://images.milledcdn.com/2017-11-27/WTgBz3Qe_RoCC5M5/DPCmin9ZTGi3.gif" alt="cyber-monday" /> */}
                                     <img className="mt-3" style={{ width: '30%' }} src={cupom} alt="cyber-monday" />
                                 </div>
                             </Carousel.Item>
                         </Carousel>
-
-
                         <div className="d-flex justify-content-center align-items-center flex-wrap flex-row  mt-3 p-3" style={{ color: 'white' }}>
-
                             {(categories !== 0 && categories.map((item) => {
                                 return (
                                     <Link key={item} to={`/category/${item}`}>
-                                    <div id="cat" className="m-1 mt-5">
-                                        <h4 className="m-3 p-2" >{item}</h4>
-                                    </div>
+                                        <div id="cat" className="m-1 mt-5">
+                                            <h4 className="m-3 p-2" >{item}</h4>
+                                        </div>
                                     </Link>
                                 )
                             }))}
                         </div>
                     </Col>
                     <Col md={12} className="d-flex justify-content-center align-items-center flex-wrap flex-column mt-5" id="cards-area" >
-
-
                         <div className="d-flex justify-content-center align-items-center flex-wrap flex-row" id="cards">
                             {(productsAll !== 0 && productsAll.map(({ id, title, description, image, price }) => {
                                 return (
@@ -94,7 +86,6 @@ const Body = () => {
             </Container>
         </>
     )
-
 }
 
 export default Body;
