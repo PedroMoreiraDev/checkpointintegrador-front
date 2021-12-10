@@ -30,7 +30,7 @@ export default function Category() {
                     <h2 className="m-5 d-flex justify-content-center align-items-center" style={{color: 'whitesmoke'}}>{cat}</h2>
                     {(products !== 0 && products.map(({ id, title, description, image, price }) => {
                         return (
-                            <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />
+                            <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} prodcTitle={title} prodcPrice={price} />
                         )
                     }))}
                 </Row>
