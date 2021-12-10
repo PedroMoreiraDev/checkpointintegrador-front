@@ -5,7 +5,7 @@ import { Card, Button } from 'react-bootstrap';
 
 const CardProd=({prodcImg, producTitle, prodcDesc,producPrice})=>{
     return(
-        <Card className="m-5 p-3"style={{ width: '18rem', height: '30rem' }} id="card">
+        <Card className="m-5 p-3"style={{ width: '21rem', height: '30rem' }} id="card">
             <div className="d-flex justify-content-center align-items-center">
                 <img src={prodcImg} alt="" height="200rem"/>
             </div>
@@ -16,7 +16,7 @@ const CardProd=({prodcImg, producTitle, prodcDesc,producPrice})=>{
                 <Card.Text id="preco">
                     Preço: R$ {producPrice}
                 </Card.Text>
-                <div className="d-flex justify-content-center align-items-center" id="button">  
+                <div className="d-flex justify-content-center align-items-center flex-wrap flex-column" id="button">  
                     <Button id="button" variant="primary">Comprar</Button>
                     <a className="mt-1" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 20 20">
                                 <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
