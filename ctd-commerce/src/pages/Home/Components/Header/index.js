@@ -40,7 +40,7 @@ const Header = () => {
                                         })}
                                 </NavDropdown>
                                 <Nav.Link as={Link} to={'/about'}>
-                                        Sobre nós!
+                                        Sobre
                                 </Nav.Link>
                                 <Nav.Link as={Link} to="/product/cart">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart4" viewBox="0 0 20 20">
