@@ -26,7 +26,7 @@ const Details = () => {
     let prodcId = products.id;
     let prodcImg = products.image;
     let prodcDesc = products.description;
-    let prodcPrice = products.price;
+    let prodBrPrice = products.price;
     let prodcTitle = products.title;
 
     return (
@@ -52,7 +52,7 @@ const Details = () => {
                                 <h5 className="mb-4">Preço: R$ {products.price}</h5>
 
                                 <div className="d-flex justify-content-center align-items-start flex-wrap flex-column">
-                                <Button onClick={()=>addProd({prodcId, prodcImg, prodcTitle, prodcDesc,prodcPrice})} id="button" variant="primary">Comprar</Button>
+                                <Button onClick={()=>addProd({prodcId, prodcImg, prodcTitle, prodcDesc,prodBrPrice})} id="button" variant="primary">Comprar</Button>
                                 </div>
                             </div>
                         </Col>

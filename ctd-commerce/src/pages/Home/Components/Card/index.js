@@ -28,7 +28,7 @@ var prodBrPrice = prodcPrice.toLocaleString('pt-BR', {
                     Preço: R$ {prodBrPrice}
                 </Card.Text>
                 <div className="d-flex justify-content-center align-items-center flex-wrap flex-column" id="button">  
-                    <Button onClick={()=>addProd({prodcId, prodcImg, prodcTitle, prodcDesc,prodBrPrice})} id="button" variant="primary">Comprar</Button>
+                    <Button onClick={()=>addProd({prodcId, prodcImg, prodcTitle, prodcDesc, prodBrPrice})} id="button" variant="primary">Comprar</Button>
                     
                 </div>
             </Card.Body>
