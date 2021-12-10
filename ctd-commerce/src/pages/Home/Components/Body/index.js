@@ -50,14 +50,14 @@ const Body = () => {
                     <Col md={12}>
 
                         <Carousel>
-                            <Carousel.Item>  
+                            <Carousel.Item>
                                 <div className=" container-fluid d-flex justify-content-center align-items-center flex-wrap flex-row" id="side-bar">
                                     <img className="mt-3" style={{ width: '32%' }} src="https://images.milledcdn.com/2017-11-27/WTgBz3Qe_RoCC5M5/DPCmin9ZTGi3.gif" alt="cyber-monday" />
                                     {/* <img className="mt-3" style={{ width: '20%' }} src={cupom} alt="cyber-monday" /> */}
                                 </div>
                             </Carousel.Item>
-                            
-                            <Carousel.Item>  
+
+                            <Carousel.Item>
                                 <div className=" container-fluid d-flex justify-content-center align-items-center flex-wrap flex-row" id="side-bar">
                                     {/* <img className="mt-3" style={{ width: '22%' }} src="https://images.milledcdn.com/2017-11-27/WTgBz3Qe_RoCC5M5/DPCmin9ZTGi3.gif" alt="cyber-monday" /> */}
                                     <img className="mt-3" style={{ width: '30%' }} src={cupom} alt="cyber-monday" />
@@ -66,33 +66,32 @@ const Body = () => {
                         </Carousel>
 
 
-                        <div className="d-flex justify-content-center align-items-center flex-wrap flex-row  mt-3 p-3"  style={{ color: 'white' }}>
-                           
+                        <div className="d-flex justify-content-center align-items-center flex-wrap flex-row  mt-3 p-3" style={{ color: 'white' }}>
+
                             {(categories !== 0 && categories.map((item) => {
                                 return (
-                                    <Link to={`/category/${item}`}>
-                                    <div key={item} id="cat" className="m-1 mt-5"><a className="m-3 p-2"  href="Item">{item}</a></div>
+                                    <Link key={item} to={`/category/${item}`}>
+                                    <div id="cat" className="m-1 mt-5">
+                                        <h4 className="m-3 p-2" >{item}</h4>
+                                    </div>
                                     </Link>
-                                    
                                 )
                             }))}
                         </div>
-
-                     
                     </Col>
                     <Col md={12} className="d-flex justify-content-center align-items-center flex-wrap flex-column mt-5" id="cards-area" >
-                        
+
 
                         <div className="d-flex justify-content-center align-items-center flex-wrap flex-row" id="cards">
-                            {productsAll.map(({ id, title, description, image, price }) => {
+                            {(productsAll !== 0 && productsAll.map(({ id, title, description, image, price }) => {
                                 return (
                                     <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} prodcTitle={title} prodcPrice={price} />
                                 )
-                            })}
+                            }))}
                         </div>
                     </Col>
                 </Row>
-            </Container>      
+            </Container>
         </>
     )
 
