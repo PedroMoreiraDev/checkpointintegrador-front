@@ -20,11 +20,11 @@ const CarouselHome = () => {
         loadProductData();
     }, [setProducts]);
 
-    const isEletronic = products => products.category === 'Eletronico';
-    const isFood = products => products.category === 'Comida';
+    const isEletronic = products => products.category === 'Eletronicos';
+    const isFood = products => products.category === 'Comidas';
     const isToys = products => products.category === 'Brinquedos';
-    const isCloathing = products => products.category === 'Vestuario';
-    const isDrink = products => products.category === 'Bebida';
+    const isCloathing = products => products.category === 'Vestuarios';
+    const isDrink = products => products.category === 'Bebidas';
     const isJewelery = products => products.category === 'Joias e Relogios';
 
     const prodct1 = products.filter(isEletronic).pop();

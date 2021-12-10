@@ -27,7 +27,7 @@ export default function Category() {
             </Helmet>
             <Container fluid className="d-flex justify-content-center align-items-center" id="container-cat" >
                 <Row md={12} className="d-flex justify-content-center align-items-center" >
-                    <h2 className="m-5 d-flex justify-content-center align-items-center">Produtos da Categoria {cat}</h2>
+                    <h2 className="m-5 d-flex justify-content-center align-items-center" style={{color: 'whitesmoke'}}>{cat}</h2>
                     {(products !== 0 && products.map(({ id, title, description, image, price }) => {
                         return (
                             <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} producTitle={title} producPrice={price} />

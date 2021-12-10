@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Container, Col} from 'react-bootstrap'
 import { Helmet } from 'react-helmet-async';
 import './style.scss';
 import Duyllyan from "./Assets/duy.png"
@@ -7,7 +7,7 @@ import Pedro from "./Assets/pedro.png"
 import Fernando from "./Assets/fernando.png"
 import Leonardo from "./Assets/leonardo.png"
 import Peter from "./Assets/peter.png"
-import Mariana from "./Assets/magalu.png"
+import Mariana from "./Assets/mariana.png"
 
 
 export default class About extends Component {
