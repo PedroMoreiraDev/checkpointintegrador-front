@@ -9,9 +9,11 @@ import Details from '../pages/Details';
 import About from '../pages/About';
 import { HelmetProvider } from 'react-helmet-async';
 import Cart from '../pages/Cart';
+import CartContextProvider from '../contexts/CartContext';
 
 const RouteList = () => (
   <BrowserRouter>
+  <CartContextProvider>
     <HelmetProvider>
   <Header/>
     <Routes>
@@ -20,11 +22,12 @@ const RouteList = () => (
       <Route path="/product/details/:produc" element={<Details/>} />
       <Route path="/product/cart" element={<Cart />} />
       <Route path="/about" element={<About/>} />
-
       <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer/>
     </HelmetProvider>
+    </CartContextProvider>
+
   </BrowserRouter>
 );
 

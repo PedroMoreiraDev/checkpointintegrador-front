@@ -41,9 +41,9 @@ const CarouselHome = () => {
             <Carousel.Item>
                 <Row>
                     <div className="d-flex justify-content-center align-items-center">
-                        {(Carrousel1[0] !== undefined && Carrousel1.map(({ id, image, description, title, price }) => {
+                        {(Carrousel1[0] !== undefined && Carrousel1.map(({ id, image, description, title, price }, index) => {
                             return (
-                                <Col id="setClassName" key={id} md={3} sm={6} className="d-none d-md-block">
+                                <Col id="setClassName" key={id} md={3} sm={6} className={`${index === 1 ? "d-none d-sm-block" : index === 2 ? "d-none d-md-block" : ""}`}>
                                     <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} prodcTitle={title} prodcPrice={price} />
                                 </Col>
                             )
@@ -56,9 +56,9 @@ const CarouselHome = () => {
             <Carousel.Item>
                 <Row>
                     <div className="d-flex justify-content-center align-items-center">
-                        {(Carrousel2[0] !== undefined && Carrousel2.map(({ id, image, description, title, price }) => {
+                        {(Carrousel2[0] !== undefined && Carrousel2.map(({ id, image, description, title, price }, index) => {
                             return (
-                                <Col key={id} md={3} sm={6} className="d-none d-md-block">
+                                <Col id="setClassName" key={id} md={3} sm={6} className={`${index === 1 ? "d-none d-sm-block" : index === 2 ? "d-none d-md-block" : ""}`}>
                                     <CardProd key={id} prodcId={id} prodcImg={image} prodcDesc={description} prodcTitle={title} prodcPrice={price} />
                                 </Col>
                             )
