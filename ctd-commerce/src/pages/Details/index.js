@@ -1,9 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component,useState, useEffect } from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import './style.scss';
+import { useParams } from 'react-router-dom';
+import api from '../../service/Api';
 
 export default class Details extends Component {
     render() {
+        const { produc } = useParams();
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        async function loadProductData() {
+            try {
+                const response = await api.get(`/products/${produc}`);
+                setProducts(response.data);
+                console.log(response.data);
+            } catch (err) {
+                console.error("Não foi possivel carregar os dados" + err);
+            }
+        }
+        loadProductData();
+    },[produc]);
+
         return (
             <>
             <Container fluid className="d-flex justify-content-center align-items-center mb-5">
