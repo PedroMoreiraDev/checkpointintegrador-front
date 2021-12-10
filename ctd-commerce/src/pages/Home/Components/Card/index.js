@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../../../contexts/CartContext';
 
 const CardProd=({prodcId, prodcImg, prodcTitle, prodcDesc,prodcPrice})=>{
+    
+var prodBrPrice = prodcPrice.toLocaleString('pt-BR', {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 3
+})
 
     const {addProd} = useContext(CartContext);
     return(
@@ -21,10 +26,10 @@ const CardProd=({prodcId, prodcImg, prodcTitle, prodcDesc,prodcPrice})=>{
                 <Card.Title>{prodcTitle}</Card.Title>
                 <Card.Text>{prodcDesc}</Card.Text>
                 <Card.Text id="preco">
-                    Preço: R$ {prodcPrice}
+                    Preço: R$ {prodBrPrice}
                 </Card.Text>
                 <div className="d-flex justify-content-center align-items-center flex-wrap flex-column" id="button">  
-                    <Button onClick={()=>addProd({prodcId, prodcImg, prodcTitle, prodcDesc,prodcPrice})} id="button" variant="primary">Comprar</Button>
+                    <Button onClick={()=>addProd({prodcId, prodcImg, prodcTitle, prodcDesc,prodBrPrice})} id="button" variant="primary">Comprar</Button>
                     
                 </div>
             </Card.Body>
