@@ -34,3 +34,5 @@ Requisitos Front-end:
 
     10)Não se esqueça de colocar todos os membros da equipe na página de sobre nós.
 
+### Projeto final (já com integração back + front)
+![grab-landing-page](https://github.com/PedroMoreiraDev/checkpointintegrador-back/blob/main/gif-site-projeto-final.gif?raw=true)
